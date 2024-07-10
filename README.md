@@ -1,5 +1,8 @@
-<<<<<<< HEAD
-# bix-intelligence-challenge
+A note on the selection process' questionnaire:
+
+Apart from this repository, I also had to answer over 10 questions on a questionnaire. Many of these questions required me to analyze specific columns while disregarding NaN values. I could only find the expected answers by droping all NaN values across the entire dataset using .dropna(), but this approach removes any row containing a NaN value. With one column having over 70% NaN values, while others average between 1.5% and 4%, this method drastically reduced our dataframe from 60,000 to just 570 rows. Instead, by handling NaN values only in the columns of interest, we obtained more meaningful results that better reflected the actual data.
+
+
 =======
 # bix-challenge
 
