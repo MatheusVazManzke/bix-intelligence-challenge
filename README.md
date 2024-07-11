@@ -1,9 +1,23 @@
-A note on the selection process' questionnaire:
+## Table of Contents
+
+1. [About This Repository](#about-this-repository)
+2. [Note on the Selection Process Questionnaire](#note-on-the-selection-process-questionnaire)
+3. [Project Structure](#project-structure)
+4. [Answers to the Challenge Questions](#answers-to-the-challenge-questions)
+
+
+=======
+### About This Repository
+
+### Note on the Selection Process Questionnaire
 
 Apart from this repository, I also had to answer over 10 questions on a questionnaire. Many of these questions required me to analyze specific columns while disregarding NaN values. I could only find the expected answers by droping all NaN values across the entire dataset using .dropna(), but this approach removes any row containing a NaN value. With one column having over 70% NaN values, while others average between 1.5% and 4%, this method drastically reduced our dataframe from 60,000 to just 570 rows. Instead, by handling NaN values only in the columns of interest, we obtained more meaningful results that better reflected the actual data.
 
 
 =======
+
+### Project Structure
+
 # bix-challenge
 
 <a target="_blank" href="https://cookiecutter-data-science.drivendata.org/">
@@ -11,8 +25,6 @@ Apart from this repository, I also had to answer over 10 questions on a question
 </a>
 
 A short description of the project.
-
-## Project Organization
 
 ```
 ├── LICENSE            <- Open-source license if one is chosen
@@ -66,11 +78,12 @@ A short description of the project.
 
 --------
 
-Challenge Activities
+### Answers to the Challenge Questions
+
 To solve this problem we want you to answer the following questions:
 
-**1. What steps would you take to solve this problem? Please describe as completely and clearly as possible all the steps that you see as essential for solving the problem.
-**   Please, check this notebook for a detailed walkthrough. 
+**1. What steps would you take to solve this problem? Please describe as completely and clearly as possible all the steps that you see as essential for solving the problem.**
+Please, check this notebook for a detailed walkthrough. 
 
 **2. Which technical data science metric would you use to solve this challenge? Ex: absolute error, rmse, etc.
 **   My go to metric in this scenario is the F1-score. When a dataset is as imbalanced as the one we are dealing with, base accuracy will always be high if we just assume that every prediction belongs to the negative class. We may also get things wrong if we just look at Precision or Recall. We might get 100% Precision at the cost of too many false negatives. 
