@@ -1,5 +1,3 @@
-Hey there! If you're reading this message, I'm currently putting the finishing touches on this repository. I just want to make sure that I won't miss any deadlines for sharing it.
-
 ## Table of Contents
 
 1. [About This Repository](#about-this-repository)
