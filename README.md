@@ -7,17 +7,17 @@
 
 
 =======
-### About This Repository
+## About This Repository
 I have written the entire modeling process in a single, heavily annotated [notebook](https://github.com/MatheusVazManzke/bix-intelligence-challenge/blob/main/notebooks/exploration/0.0-mvm-data-exploration.ipynb). This notebook is intended to showcase my current skills as a Data Scientist as I develop a quick proof-of-concept model for immediate demonstration. The steps reflect my thought process as I tackle the given problem. You will find the scripts for the data pipeline and model prediction [here](https://github.com/MatheusVazManzke/bix-intelligence-challenge/tree/main/bix-challenge). The answers to the 16 challenge questions are provided at the end of this README file.
 
 
-### Note on the Selection Process Questionnaire
+## Note on the Selection Process Questionnaire
 
 Apart from this repository, I also had to answer over 10 questions on a questionnaire. Many of these questions required me to analyze specific columns while disregarding NaN values. I could only find the expected answers by droping all NaN values across the entire dataset using .dropna(), but this approach removes any row containing a NaN value. With one column having over 70% NaN values, while others average between 1.5% and 4%, this method drastically reduced our dataframe from 60,000 to just 570 rows. Instead, by handling NaN values only in the columns of interest, we are obtained more meaningful results that better reflected the actual data.
 
 =======
 
-### Project Structure
+## Project Structure
 
 I use [cookiecutter](https://github.com/drivendataorg/cookiecutter-data-science) here. You will find a description of how this project is structured bellow. I decided to keep everything so that you can have a full view of how my projects are usually structured.
 
@@ -74,21 +74,21 @@ I use [cookiecutter](https://github.com/drivendataorg/cookiecutter-data-science)
 
 --------
 
-### Answers to the Challenge Questions
+## Answers to the Challenge Questions
 
 To solve this problem we want you to answer the following questions:
 
 **1. What steps would you take to solve this problem? Please describe as completely and clearly as possible all the steps that you see as essential for solving the problem.**
     
 Please, refer to [this notebook](https://github.com/MatheusVazManzke/bix-intelligence-challenge/blob/main/notebooks/exploration/0.0-mvm-data-exploration.ipynb) for this answer to      this question. I will lay out the main steps below:
-       Exploratory Analysis / Data Transformation
-        - Import Data
-        - Check if the underlying probabilistic distributions are the same for both files
-        - Splitting the data
-        - Understand the nature of NaN's.
-        - Checking for categorical variables
-        - Measuring the kurtosis of the distributions
-        - Imputing and droping NaN's 
+       ###Exploratory Analysis / Data Transformation
+        ##- Import Data
+        ##- Check if the underlying probabilistic distributions are the same for both files
+        ##- Splitting the data
+        ##- Understand the nature of NaN's.
+        ##- Checking for categorical variables
+        ##- Measuring the kurtosis of the distributions
+        ##- Imputing and droping NaN's 
         Modeling
         - Comparing the performance of different models on our train set
         - Choosing a baseline model for futher optimization (CatBoostClassifier)
