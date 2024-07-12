@@ -81,14 +81,14 @@ To solve this problem we want you to answer the following questions:
 **1. What steps would you take to solve this problem? Please describe as completely and clearly as possible all the steps that you see as essential for solving the problem.**
     
 Please, refer to [this notebook](https://github.com/MatheusVazManzke/bix-intelligence-challenge/blob/main/notebooks/exploration/0.0-mvm-data-exploration.ipynb) for this answer to      this question. I will lay out the main steps below:
-       ###Exploratory Analysis / Data Transformation
-        ##- Import Data
-        ##- Check if the underlying probabilistic distributions are the same for both files
-        ##- Splitting the data
-        ##- Understand the nature of NaN's.
-        ##- Checking for categorical variables
-        ##- Measuring the kurtosis of the distributions
-        ##- Imputing and droping NaN's 
+       ### Exploratory Analysis / Data Transformation
+        ## Import Data
+        ## Check if the underlying probabilistic distributions are the same for both files
+        ## Splitting the data
+        ## Understand the nature of NaN's.
+        ## Checking for categorical variables
+        ## Measuring the kurtosis of the distributions
+        ## Imputing and droping NaN's 
         Modeling
         - Comparing the performance of different models on our train set
         - Choosing a baseline model for futher optimization (CatBoostClassifier)
