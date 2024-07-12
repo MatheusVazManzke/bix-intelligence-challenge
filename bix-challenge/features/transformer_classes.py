@@ -2,6 +2,8 @@ import pandas as pd
 import numpy as np
 from sklearn.base import BaseEstimator, TransformerMixin
 import operator
+from sklearn.impute import SimpleImputer
+from sklearn.preprocessing import StandardScaler
 
 
 class RandomNoiseColumnsTransformer(BaseEstimator, TransformerMixin):
@@ -71,6 +73,52 @@ class KeepColumnsTransformer(BaseEstimator, TransformerMixin):
 
         X_transformed = X_transformed[self.columns]
 
+        return X_transformed
+
+
+class TypeFloatTransformer(BaseEstimator, TransformerMixin):
+    def __init__(self):
+        pass
+
+    def fit(self, X, y=None):
+        return self
+
+    def transform(self, X, y=None):
+        X = X.copy()
+        X.replace("na", np.nan, inplace=True)
+        if "class" in X.columns:
+            X["class"].replace({"neg": 0, "pos": 1}, inplace=True)
+        X = X.astype("float64")
+        return X
+
+
+class DataFrameSimpleImputer(BaseEstimator, TransformerMixin):
+    def __init__(self, strategy="mean"):
+        self.strategy = strategy
+        self.imputer = SimpleImputer(strategy=self.strategy)
+
+    def fit(self, X, y=None):
+        self.imputer.fit(X)
+        return self
+
+    def transform(self, X):
+        X_transformed = self.imputer.transform(X)
+        return pd.DataFrame(X_transformed, columns=X.columns)
+
+
+class DataFrameScaler(BaseEstimator, TransformerMixin):
+    def __init__(self):
+        self.scaled = StandardScaler()
+        self.columns_to_scale = None
+
+    def fit(self, X, y=None):
+        self.columns_to_scale = [col for col in X.columns if col != "class"]
+        self.scaled.fit(X[self.columns_to_scale])
+        return self
+
+    def transform(self, X):
+        X_transformed = X.copy()
+        X_transformed[self.columns_to_scale] = self.scaled.transform(X[self.columns_to_scale])
         return X_transformed
 
 
