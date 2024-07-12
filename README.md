@@ -8,7 +8,7 @@
 
 =======
 ### About This Repository
-I have written the entire modeling process in a single, heavily annotated [notebook]{https://github.com/MatheusVazManzke/bix-intelligence-challenge/blob/main/notebooks/exploration/0.0-mvm-data-exploration.ipynb}. This notebook is intended to showcase my current skills as a Data Scientist as I develop a quick proof-of-concept model for immediate demonstration. The steps reflect my thought process as I tackle the given problem. You will find the scripts for the data pipeline and model prediction [here]{https://github.com/MatheusVazManzke/bix-intelligence-challenge/tree/main/bix-challenge}. The answers to the 16 challenge questions are provided at the end of this README file.
+I have written the entire modeling process in a single, heavily annotated [notebook](https://github.com/MatheusVazManzke/bix-intelligence-challenge/blob/main/notebooks/exploration/0.0-mvm-data-exploration.ipynb). This notebook is intended to showcase my current skills as a Data Scientist as I develop a quick proof-of-concept model for immediate demonstration. The steps reflect my thought process as I tackle the given problem. You will find the scripts for the data pipeline and model prediction [here]{https://github.com/MatheusVazManzke/bix-intelligence-challenge/tree/main/bix-challenge}. The answers to the 16 challenge questions are provided at the end of this README file.
 
 
 ### Note on the Selection Process Questionnaire
@@ -80,7 +80,7 @@ To solve this problem we want you to answer the following questions:
 
 **1. What steps would you take to solve this problem? Please describe as completely and clearly as possible all the steps that you see as essential for solving the problem.**
     
-Please, refer to [this notebook]{https://github.com/MatheusVazManzke/bix-intelligence-challenge/blob/main/notebooks/exploration/0.0-mvm-data-exploration.ipynb} for this answer to      this question. I will lay out the main steps below:
+Please, refer to [this notebook](https://github.com/MatheusVazManzke/bix-intelligence-challenge/blob/main/notebooks/exploration/0.0-mvm-data-exploration.ipynb) for this answer to      this question. I will lay out the main steps below:
        Exploratory Analysis / Data Transformation
         - Import Data
         - Check if the underlying probabilistic distributions are the same for both files
