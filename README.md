@@ -1,3 +1,5 @@
+Hey there! If you're reading this message, I'm currently putting the finishing touches on this repository. I just want to make sure that I won't miss any deadlines for sharing it.
+
 ## Table of Contents
 
 1. [About This Repository](#about-this-repository)
@@ -81,28 +83,28 @@ To solve this problem we want you to answer the following questions:
 **1. What steps would you take to solve this problem? Please describe as completely and clearly as possible all the steps that you see as essential for solving the problem.**
     
 Please, refer to [this notebook](https://github.com/MatheusVazManzke/bix-intelligence-challenge/blob/main/notebooks/exploration/0.0-mvm-data-exploration.ipynb) for this answer to      this question. I will lay out the main steps below:
-       ### Exploratory Analysis / Data Transformation
-        ## Import Data
-        ## Check if the underlying probabilistic distributions are the same for both files
-        ## Splitting the data
-        ## Understand the nature of NaN's.
-        ## Checking for categorical variables
-        ## Measuring the kurtosis of the distributions
-        ## Imputing and droping NaN's 
-        Modeling
-        - Comparing the performance of different models on our train set
-        - Choosing a baseline model for futher optimization (CatBoostClassifier)
-        - Feature selection
-        - Hyperparameter tuning with Optuna
-        - Model calibration
-        - SHAP values
-        - Test set. 
-        Data pipeline
-        - Serialize our final model
-        - Create our data transformation classes and functions
-        - Data transformation scripts
-        - Test our scripts
-        
+       - Exploratory Analysis / Data Transformation
+            - Import Data
+            - Check if the underlying probabilistic distributions are the same for both files
+            - Splitting the data
+            - Understand the nature of NaN's.
+            - Checking for categorical variables
+            - Measuring the kurtosis of the distributions
+            - Imputing and droping NaN's 
+       - Modeling
+            - Comparing the performance of different models on our train set
+            - Choosing a baseline model for futher optimization (CatBoostClassifier)
+            - Feature selection
+            - Hyperparameter tuning with Optuna
+            - Model calibration
+            - SHAP values
+            - Test set. 
+        - Data pipeline
+            - Serialize our final model
+            - Create data transformation classes and functions
+            - Data transformation scripts
+            - Test the scripts
+            
 **2. Which technical data science metric would you use to solve this challenge? Ex: absolute error, rmse, etc.**
     My go-to metric in this scenario is the F1-score. When a dataset is as imbalanced as the one we're dealing with, base accuracy will always be high if we assume every prediction belongs to the negative class. We might also get misleading results if we only look at Precision or Recall. We could achieve 100% Precision at the cost of too many false negatives.
    
