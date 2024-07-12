@@ -10,7 +10,7 @@ Hey there! If you're reading this message, I'm currently putting the finishing t
 
 =======
 ## About This Repository
-I have written the entire modeling process in a single, heavily annotated [notebook](https://github.com/MatheusVazManzke/bix-intelligence-challenge/blob/main/notebooks/exploration/0.0-mvm-data-exploration.ipynb). This notebook is intended to showcase my current skills as a Data Scientist as I develop a quick proof-of-concept model for immediate demonstration. The steps reflect my thought process as I tackle the given problem. You will find the scripts for the data pipeline and model prediction [here](https://github.com/MatheusVazManzke/bix-intelligence-challenge/tree/main/bix-challenge). The answers to the 16 challenge questions are provided at the end of this README file.
+I have written the entire modeling process in a single, heavily annotated [notebook](https://github.com/MatheusVazManzke/bix-intelligence-challenge/blob/main/notebooks/exploration/0.0-mvm-data-exploration.ipynb). This notebook is intended to showcase my current skills as a Data Scientist as I develop a quick proof-of-concept model for immediate demonstration. The steps reflect my thought process as I tackle the given problem. Using [this pipeline](https://github.com/MatheusVazManzke/bix-intelligence-challenge/tree/main/bix-challenge) I treated the test dataset and made new predictions using our already trained model. We got a reduction of 72% in total costs, based on our metrics. I believe this could be reduced further with more tuning. The answers to the 16 challenge questions are provided at the end of this README file.
 
 
 ## Note on the Selection Process Questionnaire
@@ -18,6 +18,7 @@ I have written the entire modeling process in a single, heavily annotated [noteb
 Apart from this repository, I also had to answer over 10 questions on a questionnaire. Many of these questions required me to analyze specific columns while disregarding NaN values. I couldn't find any of the expected answers, I only did when droping all NaN values across the entire dataset using .dropna(), but this approach removes any row containing a NaN value. With one column having over 70% NaN values, while others average between 1.5% and 4%, this method drastically reduced our dataframe from 60,000 to just 570 rows. I don't know if this is intended.
 ![question](https://github.com/MatheusVazManzke/bix-intelligence-challenge/blob/main/reports/figures/bix-sample-question.png)
 ![answer](https://github.com/MatheusVazManzke/bix-intelligence-challenge/blob/main/reports/figures/bix-question-answer.png)
+![answer](https://github.com/MatheusVazManzke/bix-intelligence-challenge/blob/main/reports/figures/df_shape.png)
 
 =======
 
@@ -84,28 +85,7 @@ To solve this problem we want you to answer the following questions:
 
 **1. What steps would you take to solve this problem? Please describe as completely and clearly as possible all the steps that you see as essential for solving the problem.**
     
-Please, refer to [this notebook](https://github.com/MatheusVazManzke/bix-intelligence-challenge/blob/main/notebooks/exploration/0.0-mvm-data-exploration.ipynb) for this answer to      this question. I will lay out the main steps below:
-       - Exploratory Analysis / Data Transformation
-            - Import Data
-            - Check if the underlying probabilistic distributions are the same for both files
-            - Splitting the data
-            - Understand the nature of NaN's.
-            - Checking for categorical variables
-            - Measuring the kurtosis of the distributions
-            - Imputing and droping NaN's 
-       - Modeling
-            - Comparing the performance of different models on our train set
-            - Choosing a baseline model for futher optimization (CatBoostClassifier)
-            - Feature selection
-            - Hyperparameter tuning with Optuna
-            - Model calibration
-            - SHAP values
-            - Test set. 
-        - Data pipeline
-            - Serialize our final model
-            - Create data transformation classes and functions
-            - Data transformation scripts
-            - Test the scripts
+Please, refer to [this notebook](https://github.com/MatheusVazManzke/bix-intelligence-challenge/blob/main/notebooks/exploration/0.0-mvm-data-exploration.ipynb) for the answer to      this question. 
             
 **2. Which technical data science metric would you use to solve this challenge? Ex: absolute error, rmse, etc.**
     My go-to metric in this scenario is the F1-score. When a dataset is as imbalanced as the one we're dealing with, base accuracy will always be high if we assume every prediction belongs to the negative class. We might also get misleading results if we only look at Precision or Recall. We could achieve 100% Precision at the cost of too many false negatives.
