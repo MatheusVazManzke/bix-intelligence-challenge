@@ -119,12 +119,9 @@ Please, refer to [this notebook](https://github.com/MatheusVazManzke/bix-intelli
     
 **13. What risks or precautions would you present to the customer before putting this model into production?**
     All models are probabilistic, meaning there will necessarily be wrong predictions. But we are putting it into production because we believe we can keep wrong predictions to a manageable minimum that will, on average, dramatically reduce their costs. A warning, though: Data may change, impacting our model. That's why we will monitor the state of their data and retrain the model as needed.
-
-**14. If your predictive model is approved, how would you put it into production?**
-    Since I seriously want this job, I will be fully honest: I would need to be taught by someone more experienced in model deployment. I have an understanding of cloud computing, but I wouldn't be able to put an important project into production by myself. I do think I could learn quickly with the right guidance. To start, I would ensure my code can reliably ingest and transform our client's data for (re)training and prediction. 
     
-**16. If the model is in production, how would you monitor it?**
+**14. If the model is in production, how would you monitor it?**
     We could continuously test it for data drift, heteroscedasticity, and new trends and seasonality patterns.      
     
-**18. If the model is in production, how would you know when to retrain it?** 
+**15. If the model is in production, how would you know when to retrain it?** 
     I would refer to previous policy. It also depends on the cost of retraining. Even if it is not expensive, we don't want to be retraining it all the time, as that could add too much uncertainty. Probably the most sensible thing to do is to retrain it whenever we identify that there is significant data drift. If we get a sequence of bad results that are highly improbable even if we take into consideration the natural variabiltiy in a model's performance, we shoudl also rethink and retrain it.
